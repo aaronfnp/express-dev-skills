@@ -11,5 +11,10 @@
     <ul>
         <h3><%= skill.skills %></h3>
       <h3>Mastery: <%= skill.mastery %></h3>
+      <li>
+        <form action="/skills/<%= skill.id %>/edit" method="GET">
+          <button type="submit">Edit</button>
+      </form>
+      </li>
   </body>
 </html>

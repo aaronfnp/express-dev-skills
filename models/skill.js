@@ -11,6 +11,7 @@ module.exports = {
   getOne,
   create,
   deleteOne,
+  updateOne
 };
 
 function getAll() {
@@ -32,4 +33,12 @@ function create(skill) {
   skill.id = Date.now() % 100000
   skill.mastery = 'amateur';
   skills.push(skill);
+}
+
+function updateOne(id, inputSkill)
+{ 
+  id = parseInt(id);
+  const idx = skills.findIndex(skill => skill.id === id);
+  skills[idx] = inputSkill;
+  console.log(idx);
 }
